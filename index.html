@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles/index.css">
+    <script async src="scripts/crypto-js.min.js"></script>
+    <script src="scripts/index.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#urlencode">Url Encode / Decode</a></li>
+            <li><a href="#htmlencode">HTML Encode / Decode</a></li>
+            <li><a href="#base64encode">Base64 Encode / Decode</a></li>
+        </ul>
+        <ul>
+            <li><a href="#utf8charcodes">UTF-8 Charcodes</a></li>
+        </ul>
+        <ul>
+            <li><a href="#hashes">MD5 / SHA Hashes</a></li>
+        </ul>
+        <ul>
+            <li><a href="#numbersEncoding">Numbers Encoding</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="urlencode" class="page">
+            <h1>Url Encode / Decode</h1>
+
+            <textarea class="src"></textarea>
+            <select class="method">
+               <option value="encodeURI" >encodeURI</option>
+               <option value="encodeURIComponent" >encodeURIComponent</option>
+               <option value="decodeURI" >decodeURI</option>
+               <option value="decodeURIComponent" >decodeURIComponent</option>
+           </select>
+            <textarea readonly class="dest"></textarea>
+        </div>
+
+        <div id="htmlencode" class="page">
+            <h1>HTML Encode / Decode</h1>
+            <textarea class="src"></textarea>
+            <select class="method">
+               <option value="htmlencode">encode</option>
+               <option value="htmldecode">decode</option>
+           </select>
+            <textarea readonly class="dest"></textarea>
+        </div>
+
+        <div id="base64encode" class="page">
+            <h1>Base64 Encode / Decode</h1>
+            <textarea class="src"></textarea>
+            <select class="method">
+               <option value="base64encode">encode</option>
+               <option value="base64decode">decode</option>
+           </select>
+            <div class="error"></div>
+            <textarea readonly class="dest"></textarea>
+
+        </div>
+
+        <div id="utf8charcodes" class="page">
+            <h1>UTF-8 Charcodes</h1>
+            <textarea class="src"></textarea>
+            <pre class="dest"></pre>
+        </div>
+
+        <div id="hashes" class="page">
+            <h1>MD5 / SHA Hashes</h1>
+            <textarea class="src"></textarea>
+            <select class="method">
+               <option value="MD5">MD5</option>
+               <option value="SHA1">SHA1</option>
+               <option value="SHA256">SHA256</option>
+               <option value="SHA512">SHA512</option>
+           </select>
+            <textarea readonly class="dest"></textarea>
+        </div>
+
+        <div id="numbersEncoding" class="page">
+            <h1>Numbers Encoding</h1>
+            <input type="number" class="src" step="any" />
+            <pre class="dest"></pre>
+        </div>
+        <div class="empty-filling"> </div>
+    </div>
+    <script>
+        bootstrap();
+    </script>
+</body>
+
+</html>
